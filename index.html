@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Hole</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Black Hole</h1>
+        <p>Paste your link below to save it:</p>
+        <input type="url" id="linkInput" placeholder="Enter website link here" required>
+        <button onclick="submitLink()">Send</button>
+        <p class="message" id="confirmationMessage"></p>
+    </div>
+
+    <script>
+        function submitLink() {
+            const linkInput = document.getElementById('linkInput').value;
+            if (!linkInput) {
+                alert('Please enter a valid URL');
+                return;
+            }
+
+            // Simulating link submission and returning a serial number
+            const serialNumber = Math.floor(Math.random() * 1000000);
+
+            // Show confirmation message
+            const messageElement = document.getElementById('confirmationMessage');
+            messageElement.textContent = `Your link has been saved! Serial Number: ${serialNumber}`;
+            messageElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
