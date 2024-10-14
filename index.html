@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Hole</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add link for app icon -->
+    <link rel="apple-touch-icon" href="icon.png">
 </head>
 <body>
     <div class="container">
@@ -23,10 +25,8 @@
                 return;
             }
 
-            // Simulating link submission and returning a serial number
             const serialNumber = Math.floor(Math.random() * 1000000);
 
-            // Show confirmation message
             const messageElement = document.getElementById('confirmationMessage');
             messageElement.textContent = `Your link has been saved! Serial Number: ${serialNumber}`;
             messageElement.style.display = 'block';
